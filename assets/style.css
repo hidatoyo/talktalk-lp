@@ -672,7 +672,7 @@ ul {
 
   .teacher-track {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 250px);
     width: 100%;
     margin: 0 auto;
     justify-content: center;
