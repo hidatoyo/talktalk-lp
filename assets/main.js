@@ -2,28 +2,36 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile Menu Toggle
   const menuBtn = document.getElementById('menu-btn');
   const mobileNav = document.getElementById('mobile-nav');
+
+  if (!menuBtn || !mobileNav) {
+    return;
+  }
+
   let isMenuOpen = false;
+
+  const syncMenuState = () => {
+    mobileNav.classList.toggle('open', isMenuOpen);
+    menuBtn.setAttribute('aria-expanded', String(isMenuOpen));
+    menuBtn.innerHTML = isMenuOpen
+      ? '<span class="material-icons">close</span>'
+      : '<span class="material-icons">menu</span>';
+  };
 
   menuBtn.addEventListener('click', () => {
     isMenuOpen = !isMenuOpen;
-    if (isMenuOpen) {
-      mobileNav.classList.add('open');
-      menuBtn.innerHTML = '<span class="material-icons">close</span>';
-    } else {
-      mobileNav.classList.remove('open');
-      menuBtn.innerHTML = '<span class="material-icons">menu</span>';
-    }
+    syncMenuState();
   });
 
   // Close menu when a link is clicked
   const navLinks = mobileNav.querySelectorAll('a');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      mobileNav.classList.remove('open');
-      menuBtn.innerHTML = '<span class="material-icons">menu</span>';
       isMenuOpen = false;
+      syncMenuState();
     });
   });
+
+  syncMenuState();
 
   // Intersection Observer for Scroll Animations
   const observerOptions = {
