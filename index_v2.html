@@ -235,6 +235,7 @@
                         <ul class="price-list-features">
                             <li>仲間と一緒に楽しく学べる少人数グループ</li>
                             <li>実践的な会話を中心にアウトプットを強化</li>
+                            <li>現在はマンツーマンレッスンのみ受付中です</li>
                         </ul>
                         <div class="price-table">
                             <div class="price-table-header">
@@ -245,12 +246,16 @@
                                 <div>1回</div>
                                 <div class="price-amount">2,500<span>円〜</span></div>
                             </div>
+                            <div class="price-row">
+                                <div>24回 <small>6ヶ月パック</small></div>
+                                <div class="price-amount">55,000<span>円</span></div>
+                            </div>
                         </div>
                     </div>
 
                     <div class="admission-fee">
                         <p class="mb-sm"><strong>入会費 5,000円</strong></p>
-                        <p style="font-size: 1.6rem; color: var(--color-primary); font-weight: bold;">🎉 4回以上パック登録時 3,000円 (2,000円OFF)</p>
+                        <p class="admission-note">🎉 3月限定｜4回以上パック登録時 3,000円 (2,000円OFF)</p>
                     </div>
                 </div>
             </div>
@@ -263,26 +268,116 @@
             <div class="container">
                 <h2 class="section-title">TEACHER<span class="section-subtitle">講師紹介</span></h2>
 
-                <div class="teacher-carousel">
-                    <div class="teacher-track">
+                <div class="teacher-stage">
+                    <button class="teacher-nav teacher-nav-prev" type="button" aria-label="前の講師を見る">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+
+                    <div class="teacher-carousel" id="teacher-carousel">
+                        <div class="teacher-track">
                         <!-- Teacher Card 1: Anna -->
-                        <div class="teacher-card">
-                            <div class="teacher-img-wrapper"><img src="images/teacher_anna.jpg" alt="アンナ先生"
-                                    class="teacher-img"></div>
-                            <h3 class="teacher-name">アンナ</h3>
-                            <p class="teacher-role">ポールダンス、歌うこと、ランニング</p>
-                            <p class="teacher-desc">教科書だけでは学べない“生きた韓国語”をお届けします！<br>会話を中心に楽しく身につけましょう ˖˚⊹ ⋆♡</p>
-                        </div>
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_anna.jpg" alt="アンナ先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">アンナ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">教科書だけでは学べない“生きた韓国語”をお届けします！会話を中心に楽しく身につけましょう。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">ポールダンス、歌うこと、ランニング</p>
+                                </div>
+                            </article>
                         
-                        <!-- Teacher Card 2: Jaeyoon -->
-                        <div class="teacher-card">
-                            <div class="teacher-img-wrapper"><img src="images/teacher_jaeyoon.jpg" alt="ジェユン先生"
-                                    class="teacher-img"></div>
-                            <h3 class="teacher-name">ジェユン</h3>
-                            <p class="teacher-role">いろいろな言語で話すことや、ファッションが好きです。</p>
-                            <p class="teacher-desc">韓国語・英語・日本語の通訳など、複数の言語を同時に使う仕事をしています。</p>
+                            <!-- Teacher Card 2: Jaeyoon -->
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_jaeyoon.jpg" alt="ジェユン先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">ジェユン先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">韓国語・英語・日本語の通訳など、複数の言語を同時に使う仕事をしています。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">いろいろな言語で話すこと、ファッション</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_4.webp" alt="ジョンモク先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">ジョンモク先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">一日一歩ずつゆっくり勉強しましょう！</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">ゲーム、映画、食べ歩き</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card" data-initial-teacher="true">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_2.webp" alt="アイリ先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">アイリ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">皆さんの韓国語を学ぶことが好きになるように頑張ります。一緒に頑張りましょう♪</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">カフェ巡り、ドラマ、YouTube、新しい人とお話しすること</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_wanu.webp" alt="ワヌ先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">ワヌ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">分からないことがあればいつでも聞いてください！</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">映画、コーヒー</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_6.webp" alt="TOCCO先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">TOCCO先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートーク / オンライン</span></p>
+                                <p class="teacher-quote">みなさんの友達のような韓国語の先生です。自信を持って上手になるまで一緒に勉強していきましょう。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">カフェ巡り</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_3.webp" alt="KIKI先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">KIKI先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">オンラインレッスン</span></p>
+                                <p class="teacher-quote">毎日楽しく勉強を続ける秘訣もお伝えします。一緒に楽しく韓国語を楽しみましょう！</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">YouTubeで海外に住んでる人のvlogを見ること、本屋巡り</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_5.webp" alt="ウォノ先生"
+                                        class="teacher-img"></div>
+                                <h3 class="teacher-name">ウォノ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">人と話すのが好きなので皆さん韓国語で沢山話しましょう！！</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">ランニング、ジム、アニメ鑑賞</p>
+                                </div>
+                            </article>
                         </div>
                     </div>
+
+                    <button class="teacher-nav teacher-nav-next" type="button" aria-label="次の講師を見る">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
                 </div>
             </div>
         </section>
@@ -291,12 +386,12 @@
         <section id="about" class="space fade-in-up section-padding">
             <div class="container text-center">
                 <h2 class="section-title">ABOUT<span class="section-subtitle">教室について</span></h2>
-                <p class="space-desc mb-md" style="font-size: 1.6rem; line-height: 2;">
+                <p class="space-desc space-lead mb-md">
                     福岡市内のカフェでリラックスした雰囲気の中、<br>
                     気軽に韓国語を楽しめます。<br>
                     最大4名の少人数制で、一人ひとりに寄り添ったレッスンを提供します。
                 </p>
-                <p style="font-size: 1.4rem; color: #888;">※ 会場は順次お知らせいたします</p>
+                <p class="space-note">※ 会場は順次お知らせいたします</p>
             </div>
         </section>
 
@@ -336,7 +431,7 @@
             <div class="container text-center">
                 <h2 class="section-title">CONTACT<span class="section-subtitle">お問い合わせ</span></h2>
                 <p class="mb-md">お問い合わせは Instagram のDMから！</p>
-                <p class="mb-lg" style="font-size: 1.8rem;">한국어를 즐겁게 배워봐요！<br>一緒に楽しく韓国語を学びましょう！</p>
+                <p class="contact-tagline mb-lg">한국어를 즐겁게 배워봐요！<br>一緒に楽しく韓国語を学びましょう！</p>
 
                 <div class="contact-box">
                     <a href="https://www.instagram.com/talktalk.hangul/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
@@ -352,9 +447,9 @@
     <footer class="footer">
         <div class="container text-center">
             <img src="images/header_logo.webp" alt="TalkTalkハングル ロゴ" class="footer-logo">
-            <div class="footer-links" style="margin-bottom: 20px;">
-                <a href="legal.html" style="color: #666; font-size: 1.2rem; margin: 0 10px;text-decoration: underline;">特定商取引法に基づく表記</a>
-                <a href="privacy.html" style="color: #666; font-size: 1.2rem; margin: 0 10px;text-decoration: underline;">プライバシーポリシー</a>
+            <div class="footer-links">
+                <a href="legal.html" class="footer-link">特定商取引法に基づく表記</a>
+                <a href="privacy.html" class="footer-link">プライバシーポリシー</a>
             </div>
             <p class="copyright">&copy; TalkTalkハングル All Rights Reserved.</p>
         </div>
