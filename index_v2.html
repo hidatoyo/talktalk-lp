@@ -47,8 +47,9 @@
     <nav class="mobile-nav" id="mobile-nav">
         <a href="#feature">特徴</a>
         <a href="#method">日記メソッド</a>
-        <a href="#price">料金</a>
         <a href="#teacher">講師陣</a>
+        <a href="#price">料金</a>
+        <a href="#faq">よくある質問</a>
         <a href="#flow">入会の流れ</a>
         <a href="#contact">お問い合わせ</a>
     </nav>
@@ -56,58 +57,93 @@
     <main>
         <!-- Hero Section -->
         <section class="hero fade-in-up">
-            <div class="hero-image-container">
-                <img src="images/price_top.webp" alt="カフェでの授業風景" class="hero-image">
-                <div class="hero-image-caption">
-                    <div class="hero-image-badge">
-                        <img src="images/badge_logo.webp" alt="TalkTalk徽章" class="badge-img">
+            <div class="hero-main">
+                <div class="hero-image-container">
+                    <img src="images/price_top.webp" alt="カフェでの授業風景" class="hero-image">
+                    <div class="hero-image-caption">
+                        <div class="hero-image-badge">
+                            <img src="images/badge_logo.webp" alt="TalkTalk徽章" class="badge-img">
+                        </div>
+                        <p class="caption-title"><span class="text-green">韓国カフェ</span>で学ぶ<br>会話重視の韓国語レッスン</p>
+                        <p class="caption-line">— 福岡・春吉 / 無料体験受付中 —</p>
                     </div>
-                    <p class="caption-title"><span class="text-green">韓国カフェ</span>で学ぶ<br>会話重視の韓国語レッスン</p>
-                    <p class="caption-line">— 福岡・春吉 / 無料体験受付中 —</p>
+                </div>
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        独学で<span class="text-green">話せなかった人</span>へ。<br>
+                        春吉の韓国カフェで、<br>
+                        口から出る韓国語を身につける
+                    </h1>
+                    <p class="hero-subtitle">
+                        初心者歓迎。日本語も話せる韓国人講師と日記メソッドで、
+                        1回のレッスンの中で「書く・読む・話す」まで練習できます。
+                    </p>
+                    <div class="hero-bubbles">
+                        <div class="bubble">自分の話で<br>会話練習</div>
+                        <div class="bubble">自然な表現<br>まで修正</div>
+                    </div>
+                    <div class="hero-campaign">3月限定｜入会費 2,000円OFF</div>
+                    <a href="https://www.instagram.com/talktalk.hangul/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-hero">
+                        無料体験をInstagram DMで予約する
+                        <span class="material-icons">chevron_right</span>
+                    </a>
+                    <p class="hero-cta-note">30分の無料体験で、教室の雰囲気と進め方をご案内します。</p>
                 </div>
             </div>
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    独学で<span class="text-green">話せなかった人</span>へ。<br>
-                    春吉の韓国カフェで、<br>
-                    口から出る韓国語を身につける
-                </h1>
-                <p class="hero-subtitle">
-                    初心者歓迎。日本語も話せる韓国人講師と、<br>
-                    日記メソッドで「書く・読む・話す」を1時間で実践します。
-                </p>
-                <div class="hero-bubbles">
-                    <div class="bubble">無料体験<br>30分</div>
-                    <div class="bubble">天神南<br>春吉交差点<br>徒歩5分</div>
-                    <div class="bubble">月謝の縛り<br>なし</div>
-                    <div class="bubble">日本語OK<br>ネイティブ講師</div>
+
+            <div class="hero-proof-strip">
+                <div class="hero-proof-item">
+                    <span class="material-icons">schedule</span>
+                    <span>無料体験30分</span>
                 </div>
-                <div class="hero-campaign">3月限定｜入会費 2,000円OFF</div>
-                <a href="https://www.instagram.com/talktalk.hangul/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-hero">
-                    無料体験をDMで予約する
-                    <span class="material-icons">chevron_right</span>
-                </a>
+                <div class="hero-proof-item">
+                    <span class="material-icons">record_voice_over</span>
+                    <span>日本語OKのネイティブ講師</span>
+                </div>
+                <div class="hero-proof-item">
+                    <span class="material-icons">place</span>
+                    <span>天神南・春吉交差点から徒歩5分</span>
+                </div>
+                <div class="hero-proof-item">
+                    <span class="material-icons">task_alt</span>
+                    <span>回数制で始めやすい</span>
+                </div>
             </div>
         </section>
 
-        <!-- Intro Section -->
-        <section class="intro fade-in-up section-padding">
-            <div class="intro-image-wrapper">
-                <img src="images/intro_woman.webp" alt="笑顔の生徒と講師" class="circle-image">
+        <!-- For You Section -->
+        <section id="about" class="for-you fade-in-up section-padding">
+            <div class="container">
+                <h2 class="section-title">FOR YOU<span class="section-subtitle">こんな方におすすめ</span></h2>
+                <p class="section-lead text-center">TalkTalkは、初心者でも「自分のことを韓国語で話す」ところから始められる教室です。</p>
+
+                <div class="for-you-cards">
+                    <article class="for-you-card">
+                        <div class="for-you-icon"><span class="material-icons">favorite</span></div>
+                        <h3 class="for-you-card-title">韓国ドラマやK-POPをもっと楽しみたい</h3>
+                        <p class="for-you-card-desc">フレーズやニュアンスが分かるようになると、好きな作品や音楽の楽しみ方が一段深まります。</p>
+                    </article>
+                    <article class="for-you-card">
+                        <div class="for-you-icon"><span class="material-icons">flight_takeoff</span></div>
+                        <h3 class="for-you-card-title">旅行で使える韓国語を話せるようになりたい</h3>
+                        <p class="for-you-card-desc">注文やちょっとした会話を丸暗記で終わらせず、自分の言葉で言える形まで練習します。</p>
+                    </article>
+                    <article class="for-you-card">
+                        <div class="for-you-icon"><span class="material-icons">chat</span></div>
+                        <h3 class="for-you-card-title">独学では続かなかったけれど会話の場が欲しい</h3>
+                        <p class="for-you-card-desc">毎回のテーマとレッスンがあるので、ひとりでは止まりがちな学習も続けやすくなります。</p>
+                    </article>
+                </div>
             </div>
-            <h2 class="section-heading text-center mt-xl">
-                単語や文法を覚えるだけで終わらせず、<br>
-                毎回ちゃんと<br>「話す練習」までできる教室です
-            </h2>
         </section>
 
         <!-- Features Section -->
         <section id="feature" class="feature fade-in-up section-padding bg-gray">
             <div class="container">
                 <h2 class="section-title">FEATURE<span class="section-subtitle">3つの特徴</span></h2>
+                <p class="section-lead text-center">初めての方でも始めやすく、続けやすい理由を3つに絞ってご紹介します。</p>
 
                 <div class="feature-cards">
-                    <!-- Card 1 -->
                     <div class="feature-card">
                         <div class="feature-point">point<br><span class="point-num">01</span></div>
                         <div class="feature-body">
@@ -118,7 +154,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Card 2 -->
                     <div class="feature-card">
                         <div class="feature-point">point<br><span class="point-num">02</span></div>
                         <div class="feature-body">
@@ -129,14 +164,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Card 3 -->
                     <div class="feature-card">
                         <div class="feature-point">point<br><span class="point-num">03</span></div>
                         <div class="feature-body">
                             <h3 class="feature-title">日本語OKのネイティブ講師が自然な表現に直す</h3>
-                            <p class="feature-desc">
-                                伝わる韓国語で終わらず、実際に使われる自然な言い回しと発音までその場で修正。初心者の不安にも日本語で寄り添えます。
-                            </p>
+                            <p class="feature-desc">伝わる韓国語で終わらず、実際に使われる自然な言い回しと発音までその場で修正。初心者の不安にも日本語で寄り添えます。</p>
                             <div class="feature-img-wrapper mt-md">
                                 <img src="images/feature_native_teacher.webp" alt="ネイティブ講師の授業風景" class="feature-img">
                             </div>
@@ -151,7 +183,7 @@
             <div class="container">
                 <h2 class="section-title">METHOD<span class="section-subtitle">最大の強み：日記メソッド</span></h2>
                 <h3 class="method-catch text-center mt-sm mb-md">「覚えたのに話せない」を、<br>毎回のレッスンで少しずつなくす日記メソッド</h3>
-                <p class="text-center mb-lg">多くの人がつまずくのは、「単語や文法は勉強したのに会話で出てこない」こと。TalkTalkでは、毎回あなたの日常を韓国語にして持ってくるから、レッスンそのものがアウトプット練習になります。</p>
+                <p class="section-lead text-center">多くの人がつまずくのは、「単語や文法は勉強したのに会話で出てこない」こと。TalkTalkでは、毎回あなたの日常を韓国語にして持ってくるから、レッスンそのものがアウトプット練習になります。</p>
 
                 <div class="trial-steps">
                     <div class="trial-step">
@@ -188,19 +220,129 @@
             </div>
         </section>
 
+        <!-- Teacher Section -->
+        <section id="teacher" class="teacher fade-in-up section-padding bg-gray">
+            <div class="container">
+                <h2 class="section-title">TEACHER<span class="section-subtitle">講師紹介</span></h2>
+                <p class="section-lead text-center teacher-lead">話しやすさや得意なサポートで、自分に合う先生を見つけてください。</p>
+
+                <div class="teacher-stage">
+                    <button class="teacher-nav teacher-nav-prev" type="button" aria-label="前の講師を見る">
+                        <span class="material-icons">chevron_left</span>
+                    </button>
+
+                    <div class="teacher-carousel" id="teacher-carousel">
+                        <div class="teacher-track">
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_anna.jpg" alt="アンナ先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">アンナ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">会話中心で、教科書だけでは出てこない自然な韓国語を一緒に増やしていきます。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">ポールダンス、歌うこと、ランニング</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_jaeyoon.jpg" alt="ジェユン先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">ジェユン先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">分からないところは日本語も交えながら整理して、話せる形まで丁寧に落とし込みます。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">いろいろな言語で話すこと、ファッション</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_4.webp" alt="ジョンモク先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">ジョンモク先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">焦らなくて大丈夫です。少しずつ話せる言葉を増やしながら、自信をつけていきましょう。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">ゲーム、映画、食べ歩き</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card" data-initial-teacher="true">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_2.webp" alt="アイリ先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">アイリ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">話すことが楽しいと思えるように、やさしくテンポよく進めます。一緒に頑張りましょう。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">カフェ巡り、ドラマ、YouTube、新しい人とお話しすること</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_wanu.webp" alt="ワヌ先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">ワヌ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">質問しやすい空気を大切にしながら、会話の自信を少しずつつけていきます。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">映画、コーヒー</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_6.webp" alt="TOCCO先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">TOCCO先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートーク / オンライン</span></p>
+                                <p class="teacher-quote">友達と話すような雰囲気で、自然に口から出る韓国語を増やしていきましょう。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">カフェ巡り</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_3.webp" alt="KIKI先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">KIKI先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">オンラインレッスン</span></p>
+                                <p class="teacher-quote">オンラインでも置いていかない進め方で、毎回のレッスンを丁寧にサポートします。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">YouTubeで海外に住んでる人のvlogを見ること、本屋巡り</p>
+                                </div>
+                            </article>
+
+                            <article class="teacher-card">
+                                <div class="teacher-img-wrapper"><img src="images/teacher_5.webp" alt="ウォノ先生" class="teacher-img"></div>
+                                <h3 class="teacher-name">ウォノ先生</h3>
+                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
+                                <p class="teacher-quote">たくさん話して覚えたい方にぴったりです。会話量をしっかり確保して進めます。</p>
+                                <div class="teacher-favorites">
+                                    <span class="teacher-favorites-label">好きなこと</span>
+                                    <p class="teacher-favorites-text">ランニング、ジム、アニメ鑑賞</p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="teacher-nav teacher-nav-next" type="button" aria-label="次の講師を見る">
+                        <span class="material-icons">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- Price Section -->
         <section id="price" class="price fade-in-up section-padding">
             <div class="container">
                 <h2 class="section-title">PRICE<span class="section-subtitle">レッスン料金</span></h2>
-                <p class="text-center mb-lg">まずは1回からでも始められます。月謝制ではなく回数で選べるので、自分のペースで続けやすい料金設計です。</p>
+                <p class="section-lead text-center">まずは1回からでも始められます。今すぐご案内できるのはマンツーマンレッスンです。</p>
 
-                <div class="price-cards">
-                    <!-- Price Card 1: 1-on-1 -->
-                    <div class="price-card">
+                <div class="price-layout">
+                    <div class="price-card price-card-primary">
                         <div class="price-header-img">
                             <img src="images/space_sub2.webp" alt="カフェ内装" class="price-img">
                         </div>
                         <h3 class="price-card-title"><span>マンツーマンレッスン<br><small>(対面・1時間/回)</small></span></h3>
+                        <p class="price-card-recommendation">初めての方は、4回プランから始める方が多いです。</p>
                         <ul class="price-list-features">
                             <li>初心者でも質問しやすい完全マンツーマン指導</li>
                             <li>日記メソッドを中心に、会話量をしっかり確保</li>
@@ -214,8 +356,11 @@
                                 <div>1回 <small>単発</small></div>
                                 <div class="price-amount">4,000<span>円</span></div>
                             </div>
-                            <div class="price-row">
-                                <div>4回</div>
+                            <div class="price-row price-row-recommended">
+                                <div class="price-plan">
+                                    <span class="price-plan-main">4回</span>
+                                    <span class="price-plan-badge">初めての方におすすめ</span>
+                                </div>
                                 <div class="price-amount">15,000<span>円</span></div>
                             </div>
                             <div class="price-row">
@@ -233,192 +378,88 @@
                         </div>
                     </div>
 
-                    <!-- Price Card 2: Group -->
-                    <div class="price-card mt-lg">
-                        <h3 class="price-card-title"><span>グループレッスン<br><small>(今後開講予定・3名以上)</small></span></h3>
-                        <ul class="price-list-features">
-                            <li>仲間と一緒に楽しく学べる少人数グループ</li>
-                            <li>実践的な会話を中心にアウトプットを強化</li>
-                            <li>現在はマンツーマンレッスンを優先受付中です</li>
-                        </ul>
-                        <div class="price-table">
-                            <div class="price-table-header">
-                                <div>レッスン回数</div>
-                                <div>料金 <small>(税込)</small></div>
-                            </div>
-                            <div class="price-row">
-                                <div>1回</div>
-                                <div class="price-amount">2,500<span>円〜</span></div>
-                            </div>
-                            <div class="price-row">
-                                <div>24回 <small>6ヶ月パック</small></div>
-                                <div class="price-amount">55,000<span>円</span></div>
+                    <div class="price-side-column">
+                        <div class="price-card price-card-secondary">
+                            <h3 class="price-card-title"><span>グループレッスン<br><small>(今後開講予定・3名以上)</small></span></h3>
+                            <p class="price-side-note">現在はマンツーマンレッスンを優先受付中です。グループは生徒が集まり次第、順次ご案内します。</p>
+                            <ul class="price-list-features">
+                                <li>仲間と一緒に楽しく学べる少人数グループ</li>
+                                <li>実践的な会話を中心にアウトプットを強化</li>
+                            </ul>
+                            <div class="price-table">
+                                <div class="price-table-header">
+                                    <div>レッスン回数</div>
+                                    <div>料金 <small>(税込)</small></div>
+                                </div>
+                                <div class="price-row">
+                                    <div>1回</div>
+                                    <div class="price-amount">2,500<span>円〜</span></div>
+                                </div>
+                                <div class="price-row">
+                                    <div>24回 <small>6ヶ月パック</small></div>
+                                    <div class="price-amount">55,000<span>円</span></div>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="admission-fee">
-                        <p class="mb-sm"><strong>入会費 5,000円</strong></p>
-                        <p class="admission-note">3月限定｜4回以上パック登録時 3,000円 (2,000円OFF)</p>
+                        <div class="admission-offer">
+                            <p class="admission-offer-label">3月限定のスタート特典</p>
+                            <p class="admission-offer-price">入会費 5,000円 → 3,000円</p>
+                            <p class="admission-offer-note">4回以上のパック登録で適用されます。</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-
-
-        <!-- Teacher Section -->
-        <section id="teacher" class="teacher fade-in-up section-padding bg-gray">
+        <!-- FAQ Section -->
+        <section id="faq" class="faq fade-in-up section-padding bg-gray">
             <div class="container">
-                <h2 class="section-title">TEACHER<span class="section-subtitle">講師紹介</span></h2>
+                <h2 class="section-title">FAQ<span class="section-subtitle">よくある質問</span></h2>
+                <p class="section-lead text-center">初めての方からよくいただくご質問です。</p>
 
-                <div class="teacher-stage">
-                    <button class="teacher-nav teacher-nav-prev" type="button" aria-label="前の講師を見る">
-                        <span class="material-icons">chevron_left</span>
-                    </button>
-
-                    <div class="teacher-carousel" id="teacher-carousel">
-                        <div class="teacher-track">
-                        <!-- Teacher Card 1: Anna -->
-                            <article class="teacher-card">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_anna.jpg" alt="アンナ先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">アンナ先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
-                                <p class="teacher-quote">教科書だけでは学べない“生きた韓国語”をお届けします！会話を中心に楽しく身につけましょう。</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">ポールダンス、歌うこと、ランニング</p>
-                                </div>
-                            </article>
-                        
-                            <!-- Teacher Card 2: Jaeyoon -->
-                            <article class="teacher-card">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_jaeyoon.jpg" alt="ジェユン先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">ジェユン先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
-                                <p class="teacher-quote">韓国語・英語・日本語の通訳など、複数の言語を同時に使う仕事をしています。</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">いろいろな言語で話すこと、ファッション</p>
-                                </div>
-                            </article>
-
-                            <article class="teacher-card">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_4.webp" alt="ジョンモク先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">ジョンモク先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
-                                <p class="teacher-quote">一日一歩ずつゆっくり勉強しましょう！</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">ゲーム、映画、食べ歩き</p>
-                                </div>
-                            </article>
-
-                            <article class="teacher-card" data-initial-teacher="true">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_2.webp" alt="アイリ先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">アイリ先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
-                                <p class="teacher-quote">皆さんの韓国語を学ぶことが好きになるように頑張ります。一緒に頑張りましょう♪</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">カフェ巡り、ドラマ、YouTube、新しい人とお話しすること</p>
-                                </div>
-                            </article>
-
-                            <article class="teacher-card">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_wanu.webp" alt="ワヌ先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">ワヌ先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
-                                <p class="teacher-quote">分からないことがあればいつでも聞いてください！</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">映画、コーヒー</p>
-                                </div>
-                            </article>
-
-                            <article class="teacher-card">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_6.webp" alt="TOCCO先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">TOCCO先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">フリートーク / オンライン</span></p>
-                                <p class="teacher-quote">みなさんの友達のような韓国語の先生です。自信を持って上手になるまで一緒に勉強していきましょう。</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">カフェ巡り</p>
-                                </div>
-                            </article>
-
-                            <article class="teacher-card">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_3.webp" alt="KIKI先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">KIKI先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">オンラインレッスン</span></p>
-                                <p class="teacher-quote">毎日楽しく勉強を続ける秘訣もお伝えします。一緒に楽しく韓国語を楽しみましょう！</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">YouTubeで海外に住んでる人のvlogを見ること、本屋巡り</p>
-                                </div>
-                            </article>
-
-                            <article class="teacher-card">
-                                <div class="teacher-img-wrapper"><img src="images/teacher_5.webp" alt="ウォノ先生"
-                                        class="teacher-img"></div>
-                                <h3 class="teacher-name">ウォノ先生</h3>
-                                <p class="teacher-role"><span class="teacher-role-pill">フリートークレッスン</span></p>
-                                <p class="teacher-quote">人と話すのが好きなので皆さん韓国語で沢山話しましょう！！</p>
-                                <div class="teacher-favorites">
-                                    <span class="teacher-favorites-label">好きなこと</span>
-                                    <p class="teacher-favorites-text">ランニング、ジム、アニメ鑑賞</p>
-                                </div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <button class="teacher-nav teacher-nav-next" type="button" aria-label="次の講師を見る">
-                        <span class="material-icons">chevron_right</span>
-                    </button>
+                <div class="faq-list">
+                    <details class="faq-item" open>
+                        <summary>ハングルが読めなくても大丈夫ですか？</summary>
+                        <p class="faq-answer">大丈夫です。TalkTalkは完全初心者向けのレベルから始められるので、ハングルゼロの状態でも安心してご参加いただけます。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>どんな人が通えますか？</summary>
+                        <p class="faq-answer">年齢・職業は問いません。学生さんも社会人の方も歓迎です。韓国ドラマやK-POPが好きな方、旅行で使いたい方にも向いています。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>レッスンはどう始まりますか？</summary>
+                        <p class="faq-answer">まずは30分の無料体験で、今のレベル確認とレッスンの進め方をご説明します。合いそうだと感じたら、プランを選んでスタートできます。</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>グループレッスンは今受けられますか？</summary>
+                        <p class="faq-answer">現在はマンツーマンレッスンを優先してご案内しています。グループレッスンは今後開講予定で、生徒が集まり次第ご案内します。</p>
+                    </details>
                 </div>
-            </div>
-        </section>
-
-        <!-- About Section (lightweight cafe intro) -->
-        <section id="about" class="space fade-in-up section-padding">
-            <div class="container text-center">
-                <h2 class="section-title">FOR YOU<span class="section-subtitle">こんな方におすすめ</span></h2>
-                <p class="space-desc space-lead mb-md">
-                    韓国ドラマやK-POPをもっと理解したい方。<br>
-                    旅行で使える韓国語を、ちゃんと話せるようになりたい方。<br>
-                    独学では続かなかったけれど、会話の場があれば頑張れそうな方。
-                </p>
-                <p class="space-note">TalkTalkは、初心者でも「自分のことを韓国語で話す」ところから始められます。</p>
             </div>
         </section>
 
         <!-- Flow Section -->
-        <section id="flow" class="trial fade-in-up section-padding bg-gray">
+        <section id="flow" class="trial fade-in-up section-padding">
             <div class="container text-center">
                 <h2 class="section-title">FLOW<span class="section-subtitle">ご入会の流れ</span></h2>
                 <h3 class="trial-catch mt-sm mb-md">まずは無料体験で、<br>レッスンの進み方を気軽に試してください</h3>
+                <p class="section-lead text-center">DMで「体験希望」と送るだけで大丈夫です。しつこい勧誘はありません。</p>
 
                 <div class="trial-steps text-left">
                     <div class="trial-step">
                         <div class="step-label">STEP 1</div>
-                        <h4 class="step-title">InstagramからDMで無料体験を予約</h4>
-                        <p class="step-desc">「体験希望」と送っていただければ大丈夫です。日程調整をご案内します。</p>
+                        <h4 class="step-title">DMで「体験希望」と送るだけ</h4>
+                        <p class="step-desc">InstagramのDMからご連絡いただければ、空き状況と候補日をご案内します。</p>
                     </div>
                     <div class="trial-step">
                         <div class="step-label">STEP 2</div>
-                        <h4 class="step-title">無料体験レッスン（30分）</h4>
-                        <p class="step-desc">現在のレベル確認と、実際のレッスンの進み方をご説明します。</p>
+                        <h4 class="step-title">30分の無料体験</h4>
+                        <p class="step-desc">現在のレベル確認と、実際のレッスンの進め方を体験していただきます。</p>
                     </div>
                     <div class="trial-step">
                         <div class="step-label">STEP 3</div>
-                        <h4 class="step-title">ご希望のプランを選んでお申し込み</h4>
+                        <h4 class="step-title">合いそうならプランを選ぶ</h4>
                         <p class="step-desc">続けられそうと感じたら、回数プランを選んでスタートできます。</p>
                     </div>
                     <div class="trial-step">
@@ -435,7 +476,8 @@
             <div class="container text-center">
                 <h2 class="section-title">CONTACT<span class="section-subtitle">お問い合わせ</span></h2>
                 <p class="mb-md">空き状況の確認、無料体験の予約は Instagram のDMから受け付けています。</p>
-                <p class="contact-tagline mb-lg">春吉の韓国カフェで、<br>「勉強した韓国語」から「話せる韓国語」へ。</p>
+                <p class="contact-tagline mb-md">春吉の韓国カフェで、<br>「勉強した韓国語」から「話せる韓国語」へ。</p>
+                <p class="contact-reassurance mb-lg">まずは無料体験で、教室の雰囲気と進め方をご確認ください。</p>
 
                 <div class="contact-box">
                     <a href="https://www.instagram.com/talktalk.hangul/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large">
