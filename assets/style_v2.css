@@ -763,12 +763,20 @@ ul {
   text-align: center;
   border: 1.5px solid rgba(168, 200, 79, 0.28);
   box-shadow: 0 14px 34px rgba(125, 157, 50, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, opacity 0.35s ease;
   backdrop-filter: blur(10px);
+  opacity: 0.62;
+  transform: scale(0.96);
+}
+
+.teacher-card.is-active {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .teacher-card:hover {
-  transform: translateY(-4px);
+  opacity: 1;
+  transform: translateY(-4px) scale(0.99);
   box-shadow: 0 18px 42px rgba(125, 157, 50, 0.18);
 }
 
@@ -1164,6 +1172,8 @@ ul {
     width: var(--teacher-card-width);
     min-height: 360px;
     padding: 88px 22px 24px;
+    opacity: 0.72;
+    transform: scale(0.97);
   }
 
   .teacher-img-wrapper {

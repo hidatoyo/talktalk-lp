@@ -34,27 +34,136 @@ document.addEventListener('DOMContentLoaded', () => {
   if (teacherCarousel) {
     const prevButton = document.querySelector('.teacher-nav-prev');
     const nextButton = document.querySelector('.teacher-nav-next');
-    const firstCard = teacherCarousel.querySelector('.teacher-card');
-    const scrollAmount = () => {
-      if (!firstCard) {
-        return teacherCarousel.clientWidth * 0.85;
+    const cards = Array.from(teacherCarousel.querySelectorAll('.teacher-card'));
+    const preferredReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const autoRotateDelay = 5000;
+    let activeIndex = Math.max(cards.findIndex(card => card.hasAttribute('data-initial-teacher')), 0);
+    let autoRotateTimer = null;
+    let scrollSyncTimer = null;
+
+    const normalizeIndex = (index) => {
+      if (cards.length === 0) {
+        return 0;
       }
 
-      const gap = parseFloat(window.getComputedStyle(teacherCarousel.querySelector('.teacher-track')).gap) || 0;
-      return firstCard.getBoundingClientRect().width + gap;
+      return (index + cards.length) % cards.length;
+    };
+
+    const updateActiveCard = () => {
+      cards.forEach((card, index) => {
+        card.classList.toggle('is-active', index === activeIndex);
+      });
+    };
+
+    const getScrollLeftForCard = (card) => {
+      if (!card) {
+        return 0;
+      }
+
+      const cardOffset = card.offsetLeft - teacherCarousel.offsetLeft;
+      const centeredOffset = (teacherCarousel.clientWidth - card.offsetWidth) / 2;
+      return Math.max(0, cardOffset - centeredOffset);
+    };
+
+    const scrollToCard = (index, behavior = 'smooth') => {
+      const normalizedIndex = normalizeIndex(index);
+      const targetCard = cards[normalizedIndex];
+      if (!targetCard) {
+        return;
+      }
+
+      activeIndex = normalizedIndex;
+      updateActiveCard();
+      teacherCarousel.scrollTo({
+        left: getScrollLeftForCard(targetCard),
+        behavior
+      });
+    };
+
+    const syncActiveCardFromScroll = () => {
+      if (cards.length === 0) {
+        return;
+      }
+
+      const carouselCenter = teacherCarousel.scrollLeft + teacherCarousel.clientWidth / 2;
+      let nearestIndex = activeIndex;
+      let nearestDistance = Number.POSITIVE_INFINITY;
+
+      cards.forEach((card, index) => {
+        const cardCenter = card.offsetLeft - teacherCarousel.offsetLeft + card.offsetWidth / 2;
+        const distance = Math.abs(cardCenter - carouselCenter);
+        if (distance < nearestDistance) {
+          nearestDistance = distance;
+          nearestIndex = index;
+        }
+      });
+
+      if (nearestIndex !== activeIndex) {
+        activeIndex = nearestIndex;
+        updateActiveCard();
+      }
+    };
+
+    const stopAutoRotate = () => {
+      if (autoRotateTimer) {
+        window.clearInterval(autoRotateTimer);
+        autoRotateTimer = null;
+      }
+    };
+
+    const startAutoRotate = () => {
+      stopAutoRotate();
+      if (preferredReducedMotion || cards.length <= 1) {
+        return;
+      }
+
+      autoRotateTimer = window.setInterval(() => {
+        scrollToCard(activeIndex + 1);
+      }, autoRotateDelay);
     };
 
     if (prevButton) {
       prevButton.addEventListener('click', () => {
-        teacherCarousel.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
+        scrollToCard(activeIndex - 1);
+        startAutoRotate();
       });
     }
 
     if (nextButton) {
       nextButton.addEventListener('click', () => {
-        teacherCarousel.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
+        scrollToCard(activeIndex + 1);
+        startAutoRotate();
       });
     }
+
+    teacherCarousel.addEventListener('scroll', () => {
+      if (scrollSyncTimer) {
+        window.clearTimeout(scrollSyncTimer);
+      }
+
+      scrollSyncTimer = window.setTimeout(() => {
+        syncActiveCardFromScroll();
+      }, 120);
+    });
+
+    teacherCarousel.addEventListener('mouseenter', stopAutoRotate);
+    teacherCarousel.addEventListener('mouseleave', startAutoRotate);
+    teacherCarousel.addEventListener('focusin', stopAutoRotate);
+    teacherCarousel.addEventListener('focusout', startAutoRotate);
+    teacherCarousel.addEventListener('touchstart', stopAutoRotate, { passive: true });
+    teacherCarousel.addEventListener('touchend', startAutoRotate);
+
+    window.addEventListener('resize', () => {
+      window.requestAnimationFrame(() => {
+        scrollToCard(activeIndex, 'auto');
+      });
+    });
+
+    updateActiveCard();
+    window.requestAnimationFrame(() => {
+      scrollToCard(activeIndex, preferredReducedMotion ? 'auto' : 'smooth');
+      startAutoRotate();
+    });
   }
 
   // Intersection Observer for Scroll Animations
