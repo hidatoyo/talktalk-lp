@@ -2,11 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile Menu Toggle
   const menuBtn = document.getElementById('menu-btn');
   const mobileNav = document.getElementById('mobile-nav');
+  const navOverlay = document.getElementById('nav-overlay');
   if (menuBtn && mobileNav) {
     let isMenuOpen = false;
 
     const syncMenuState = () => {
       mobileNav.classList.toggle('open', isMenuOpen);
+      if (navOverlay) navOverlay.classList.toggle('open', isMenuOpen);
       menuBtn.setAttribute('aria-expanded', String(isMenuOpen));
       menuBtn.innerHTML = isMenuOpen
         ? '<span class="material-icons">close</span>'
@@ -26,6 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         syncMenuState();
       });
     });
+
+    // Close menu when overlay is clicked
+    if (navOverlay) {
+      navOverlay.addEventListener('click', () => {
+        isMenuOpen = false;
+        syncMenuState();
+      });
+    }
 
     syncMenuState();
   }
@@ -184,4 +194,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const animatedElements = document.querySelectorAll('.fade-in-up');
   animatedElements.forEach(el => observer.observe(el));
+
+  // Campaign Month Auto Control
+  const campaignElements = document.querySelectorAll('[data-campaign-month]');
+  if (campaignElements.length > 0) {
+    const currentMonth = new Date().getMonth() + 1;
+    campaignElements.forEach(el => {
+      const campaignMonth = parseInt(el.dataset.campaignMonth, 10);
+      if (campaignMonth && campaignMonth === currentMonth) {
+        el.textContent = `${campaignMonth}月限定｜${el.textContent}`;
+      } else if (campaignMonth && campaignMonth !== currentMonth) {
+        el.style.display = 'none';
+      }
+    });
+  }
+
+  // Also handle admission offer label with month reference
+  const admissionLabel = document.querySelector('.admission-offer-label');
+  if (admissionLabel) {
+    const currentMonth = new Date().getMonth() + 1;
+    const monthText = admissionLabel.textContent;
+    const monthMatch = monthText.match(/(\d+)月/);
+    if (monthMatch) {
+      const offerMonth = parseInt(monthMatch[1], 10);
+      if (offerMonth !== currentMonth) {
+        const offerEl = admissionLabel.closest('.admission-offer');
+        if (offerEl) offerEl.style.display = 'none';
+      }
+    }
+  }
 });
